@@ -1,16 +1,26 @@
-import { useState } from "react";
+import { RouterProvider} from 'react-router-dom';
+import router from './router';
+
+import { useSelector } from 'react-redux';
+
+import LoadingScreen from './components/LoadingScreen';
+
 import "./App.css";
-import LandingPage from "./pages/LandingPage";
-import AboutUs from "./pages/AboutUs";
-import MovieSection from "./pages/MovieSection";
-import Login from "./pages/Login";
 
 function App() {
+  const loadingIsVisible = useSelector(state => state.loading.value);
+
   return (
     <div className="App">
-      <LandingPage/>
-      <AboutUs/>
-      <MovieSection/>
+      <RouterProvider router={router} />
+
+      {
+        (loadingIsVisible)
+          ? (
+            <LoadingScreen />
+          )
+          : null
+      }
     </div>
   );
 }

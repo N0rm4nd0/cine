@@ -1,0 +1,126 @@
+.OscarSection {
+    width: 100vw;
+    height: 800px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.oscar-image {
+    width: 50%;
+    height: 100%;
+    background-image: url("https://media.glamourmagazine.co.uk/photos/61389c26236c41e831489a5d/16:9/w_2560%2Cc_limit/gettyimages-645751698_sf.jpg");
+    background-position: center left;
+}
+
+.invite-section {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.invite-title {
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.invite-desc {
+    font-family: "Inter", sans-serif;
+    text-align: justify;
+    font-weight: 300;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.invite-button {
+    cursor: pointer;
+
+    width: 350px;
+    height: 45px;
+    margin: 10px 0 10px;
+    border: none;
+    border-radius: 36px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+
+    background-color: #FF1D25;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    transition: .6s ease;
+}
+
+.invite-button:hover {
+    background-color: #FFFFFF;
+    color: red;
+}
+
+@media only screen and (max-width: 1336px) {
+    .invite-title {
+        font-size: 100px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .OscarSection {
+        flex-direction: column;
+    }
+
+    .oscar-image {
+        width: 100%;
+        height: 50%;
+        background-position: center bottom;
+    }
+
+    .invite-section {
+        width: 90%;
+        height: 50%;
+        padding: 0;
+        align-items: center;
+    }
+
+    .invite-title {
+        font-size: 50px;
+    }
+
+    .invite-desc {
+        font-size: 24px;
+    }
+
+    .invite-button {
+        width: 250px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .invite-section {
+        gap: 15px;
+    }
+
+    .invite-title {
+        font-size: 45px;
+    }
+
+    .invite-desc {
+        font-size: 20px;
+    }
+}
